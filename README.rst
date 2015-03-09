@@ -1,6 +1,24 @@
 Django-Misaka
 -------------
 
+.. image:: https://travis-ci.org/chiehtu/django-misaka.svg?branch=master
+    :target: https://travis-ci.org/chiehtu/django-misaka
+
+.. image:: https://coveralls.io/repos/chiehtu/django-misaka/badge.svg?branch=master
+    :target: https://coveralls.io/r/chiehtu/django-misaka?branch=master
+
+.. image:: https://pypip.in/version/django-misaka/badge.svg?style=flat
+    :target: https://pypi.python.org/pypi/django-misaka/
+    :alt: Latest Version
+
+.. image:: https://pypip.in/py_versions/django-misaka/badge.svg?style=flat
+    :target: https://pypi.python.org/pypi/django-misaka/
+    :alt: Supported Python versions
+
+.. image:: https://pypip.in/license/django-misaka/badge.svg?style=flat
+    :target: https://pypi.python.org/pypi/django-misaka/
+    :alt: License
+
 Now this app provide template filter and tag, Misaka API is not yet available.
 
 Installation
