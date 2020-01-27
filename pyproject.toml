@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "django-misaka"
+version = "0.2.1"
+description = "A Django app for rendering Markdown (by Misaka Markdown parser)."
+authors = ["Chieh Tu <me@chiehtu.net>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+misaka = "~2.1.1"
+Pygments = "~2.5.2"
+
+[tool.poetry.dev-dependencies]
+coverage = "^5.0.3"
+tox = "^3.14.3"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
