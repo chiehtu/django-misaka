@@ -1,5 +1,6 @@
 .coverage
 .tox
+.vscode
 *.egg-info
 *.pyc
 build
