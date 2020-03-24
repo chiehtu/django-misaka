@@ -1,6 +1,4 @@
 from django import template
-from django.utils import six
-from django.utils.safestring import SafeText
 import misaka as m
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
@@ -41,9 +39,6 @@ class MisakaNode(template.Node):
 
     def render(self, context):
         value = self.nodelist.render(context)
-        if isinstance(value, SafeText):
-            # Compatible with Python 3.
-            value = unicode(value) if six.PY2 else str(value)
         renderer = MisakaRenderer(flags=m.HTML_ESCAPE)
         md = m.Markdown(renderer,
                         extensions=m.EXT_FENCED_CODE | m.EXT_NO_INTRA_EMPHASIS)
