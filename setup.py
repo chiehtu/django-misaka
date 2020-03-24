@@ -12,7 +12,6 @@ setup(
     packages=['django_misaka'],
     include_package_data=True,
     install_requires=[
-        'houdini.py',
         'misaka',
         'Pygments',
     ],

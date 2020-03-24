@@ -1,8 +1,6 @@
 from django import template
 from django.utils import six
 from django.utils.safestring import SafeText
-
-import houdini as h
 import misaka as m
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
@@ -15,7 +13,7 @@ class MisakaRenderer(m.HtmlRenderer):
     def blockcode(self, text, lang):
         if not lang:
             return '\n<pre><code>%s</code></pre>\n' % \
-                h.escape_html(text.strip())
+                m.escape_html(text.strip())
 
         lexer = get_lexer_by_name(lang, stripall=True)
         formatter = HtmlFormatter()
