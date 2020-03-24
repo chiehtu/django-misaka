@@ -1,21 +1,26 @@
 from django import template
 import misaka as m
 from pygments import highlight
+from pygments.formatters import ClassNotFound, HtmlFormatter
 from pygments.lexers import get_lexer_by_name
-from pygments.formatters import HtmlFormatter
 
 register = template.Library()
 
 
 class MisakaRenderer(m.HtmlRenderer):
     def blockcode(self, text, lang):
-        if not lang:
-            return '\n<pre><code>%s</code></pre>\n' % \
-                m.escape_html(text.strip())
+        try:
+            lexer = get_lexer_by_name(lang, stripall=True)
+        except ClassNotFound:
+            lexer = None
 
-        lexer = get_lexer_by_name(lang, stripall=True)
-        formatter = HtmlFormatter()
-        return highlight(text, lexer, formatter)
+        if lexer:
+            formatter = HtmlFormatter()
+            return highlight(text, lexer, formatter)
+
+        return '\n<pre><code>{}</code></pre>\n'.format(
+            m.escape_html(text.strip())
+        )
 
 
 @register.filter(name='markdown')
