@@ -12,8 +12,8 @@ setup(
     packages=['django_misaka'],
     include_package_data=True,
     install_requires=[
-        'misaka',
-        'Pygments',
+        'misaka~=2.1.1',
+        'Pygments~=2.6.1',
     ],
     license='MIT',
     description=('A Django template tag for rendering '
