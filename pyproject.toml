@@ -6,14 +6,17 @@ authors = ["Chieh Tu <me@chiehtu.net>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.5"
 misaka = "~2.1.1"
 Pygments = "~2.5.2"
 
 [tool.poetry.dev-dependencies]
 coverage = "^5.0.3"
 tox = "^3.14.3"
-Django = "^3.0.4"
+Django = [
+    { version = "^2.2.11", python = "~3.5" },
+    { version = "^3.0.4", python = "^3.6" }
+]
 pytest = "^5.4.1"
 pytest-django = "^3.8.0"
 flake8 = "^3.7.9"

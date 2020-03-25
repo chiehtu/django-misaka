@@ -11,6 +11,7 @@ setup(
     version='0.2.1',
     packages=['django_misaka'],
     include_package_data=True,
+    python_requires='~=3.5',
     install_requires=[
         'misaka~=2.1.1',
         'Pygments~=2.6.1',
