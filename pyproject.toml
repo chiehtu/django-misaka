@@ -18,7 +18,7 @@ Django = [
     { version = "^3.0.4", python = "^3.6" }
 ]
 pytest = "^5.4.1"
-pytest-django = "^3.8.0"
+pytest-django = "^4.5.1"
 flake8 = "^3.7.9"
 
 [build-system]
