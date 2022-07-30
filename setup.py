@@ -11,7 +11,7 @@ setup(
     version='0.2.1',
     packages=['django_misaka'],
     include_package_data=True,
-    python_requires='~=3.5',
+    python_requires='~=3.6',
     install_requires=[
         'misaka~=2.1.1',
         'Pygments~=2.6.1',
@@ -31,7 +31,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
