@@ -1,24 +1,13 @@
 [[package]]
 name = "asgiref"
-version = "3.4.1"
-description = "ASGI specs, helper code, and adapters"
-category = "dev"
-optional = false
-python-versions = ">=3.6"
-
-[package.dependencies]
-typing-extensions = {version = "*", markers = "python_version < \"3.8\""}
-
-[package.extras]
-tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
-
-[[package]]
-name = "asgiref"
 version = "3.5.2"
 description = "ASGI specs, helper code, and adapters"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
+
+[package.dependencies]
+typing-extensions = {version = "*", markers = "python_version < \"3.8\""}
 
 [package.extras]
 tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
@@ -410,13 +399,11 @@ docs = ["rst.linker (>=1.9)", "jaraco.packaging (>=3.2)", "sphinx"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.6"
-content-hash = "33f83c061ab3f3bdabf8a7f077ec5cd8d352a7edea61a1c19d81875616f9ee7c"
+python-versions = "^3.7"
+content-hash = "16fa9f6762c9884875c745e9c38f946225fb2cf011d2fcc762e55d891610657e"
 
 [metadata.files]
 asgiref = [
-    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
-    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
     {file = "asgiref-3.5.2-py3-none-any.whl", hash = "sha256:1d2880b792ae8757289136f1db2b7b99100ce959b2aa57fd69dab783d05afac4"},
     {file = "asgiref-3.5.2.tar.gz", hash = "sha256:4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424"},
 ]
