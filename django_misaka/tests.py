@@ -1,6 +1,8 @@
 from django.template import Context, Template
 from django.template.loader import render_to_string
-from django.test import TestCase
+
+import pytest
+from pytest_django.asserts import assertHTMLEqual
 
 
 def render_template(template_string, **kwargs):
@@ -8,19 +10,33 @@ def render_template(template_string, **kwargs):
     return template.render(Context(kwargs)).strip()
 
 
-class DjangoMisakaTestCase(TestCase):
-    def test_filter(self):
-        md = "{% load markdown %}\n{{ var|markdown|safe}}"
-        self.assertEqual(render_template(md, var='**double asterisks**'),
-                         '<p><strong>double asterisks</strong></p>')
+def test_filter():
+    md = "{% load markdown %}\n{{ var|markdown|safe }}"
 
-    def test_tag(self):
-        md = render_to_string('tests/test_tag.html')
-        rendered_result = render_to_string('tests/rendered_result/tag.html')
-        self.assertHTMLEqual(md, rendered_result)
+    assert (
+        render_template(md, var="**double asterisks**")
+        == "<p><strong>double asterisks</strong></p>"
+    )
 
-    def test_syntax_highlighting(self):
-        md = render_to_string('tests/test_syntax_highlighting.html')
-        rendered_result = render_to_string(
-            'tests/rendered_result/syntax_highlighting.html')
-        self.assertHTMLEqual(md, rendered_result)
+
+@pytest.mark.parametrize(
+    "markdown,expected",
+    [
+        (
+            "tests/test_tag.html",
+            "tests/rendered_result/tag.html",
+        ),
+        (
+            "tests/test_syntax_highlighting.html",
+            "tests/rendered_result/syntax_highlighting.html",
+        ),
+    ],
+)
+def test_tag(
+    markdown,
+    expected,
+):
+    assertHTMLEqual(
+        render_to_string(markdown),
+        render_to_string(expected),
+    )
