@@ -25,9 +25,19 @@ class MisakaRenderer(m.HtmlRenderer):
 
 @register.filter(name='markdown')
 def markdown_filter(value):
-    renderer = MisakaRenderer(flags=m.HTML_ESCAPE)
-    md = m.Markdown(renderer,
-                    extensions=m.EXT_FENCED_CODE | m.EXT_NO_INTRA_EMPHASIS)
+    renderer = MisakaRenderer(
+        flags=(
+            "escape",
+        ),
+    )
+    md = m.Markdown(
+        renderer,
+        extensions=(
+            "fenced-code",
+            "no-intra-emphasis",
+        ),
+    )
+
     return md(value)
 
 
@@ -44,7 +54,17 @@ class MisakaNode(template.Node):
 
     def render(self, context):
         value = self.nodelist.render(context)
-        renderer = MisakaRenderer(flags=m.HTML_ESCAPE)
-        md = m.Markdown(renderer,
-                        extensions=m.EXT_FENCED_CODE | m.EXT_NO_INTRA_EMPHASIS)
+        renderer = MisakaRenderer(
+            flags=(
+                "escape",
+            ),
+        )
+        md = m.Markdown(
+            renderer,
+            extensions=(
+                "fenced-code",
+                "no-intra-emphasis",
+            ),
+        )
+
         return md(value)
