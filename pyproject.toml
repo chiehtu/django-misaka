@@ -19,7 +19,7 @@ Django = [
 ]
 pytest = "^7.1.2"
 pytest-django = "^4.5.2"
-flake8 = "^5.0.1"
+flake8 = "^5.0.4"
 
 [build-system]
 requires = ["poetry>=0.12"]
