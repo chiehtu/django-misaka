@@ -12,7 +12,7 @@ Pygments = "~2.13.0"
 
 [tool.poetry.dev-dependencies]
 coverage = "^6.4.2"
-tox = "^3.25.1"
+tox = "^3.28.0"
 Django = [
     { version = "~3.2.14", python = "^3.7" },
     { version = "~4.0.6", python = "^3.8" },
