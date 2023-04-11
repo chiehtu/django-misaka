@@ -8,7 +8,7 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.7"
 misaka = "~2.1.1"
-Pygments = "~2.13.0"
+Pygments = "~2.15.0"
 
 [tool.poetry.dev-dependencies]
 coverage = "^6.4.2"
