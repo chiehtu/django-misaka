@@ -28,7 +28,7 @@ jobs:
         with:
           path: |
             .tox
-          key: tox-${{ matrix.python-version }}-${{ hashFiles('tox.ini','**/poetry.lock') }}
+          key: tox-${{ matrix.python-version }}-${{ hashFiles('tox.ini') }}
 
       - name: Install tox
         run: |
