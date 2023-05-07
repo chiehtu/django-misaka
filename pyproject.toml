@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-misaka"
-version = "0.2.1"
+version = "0.2.2"
 description = "A Django app for rendering Markdown (by Misaka Markdown parser)."
 authors = ["Chieh Tu <me@chiehtu.net>"]
 license = "MIT"

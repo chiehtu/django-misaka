@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-misaka',
-    version='0.2.1',
+    version='0.2.2',
     packages=['django_misaka'],
     include_package_data=True,
     python_requires='~=3.7',
