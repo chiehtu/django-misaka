@@ -4,9 +4,22 @@ version = "0.2.2"
 description = "A Django app for rendering Markdown (by Misaka Markdown parser)."
 authors = ["Chieh Tu <me@chiehtu.net>"]
 license = "MIT"
+readme = "README.md"
+repository = "https://github.com/chiehtu/django-misaka"
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Environment :: Web Environment',
+    'Framework :: Django',
+    'Intended Audience :: Developers',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Topic :: Internet :: WWW/HTTP',
+    'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+]
+include = ["CHANGELOG.md"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">= 3.7, < 3.11"
 misaka = "~2.1.1"
 Pygments = "~2.15.1"
 
