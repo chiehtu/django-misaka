@@ -24,7 +24,7 @@ misaka = "~2.1.1"
 Pygments = "~2.15.1"
 
 [tool.poetry.dev-dependencies]
-coverage = "^6.4.2"
+coverage = "^7.2.6"
 tox = "^3.25.1"
 Django = [
     { version = "~3.2.14", python = "^3.7" },
