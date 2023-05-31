@@ -34,6 +34,7 @@ pytest = "^7.1.2"
 pytest-django = "^4.5.2"
 flake8 = "^5.0.1"
 ruff = "^0.0.267"
+black = "^23.3.0"
 
 [tool.ruff]
 select = [
@@ -42,6 +43,10 @@ select = [
     "F",  # Pyflakes
     "C",  # flake8-comprehensions
     "B",  # flake8-bugbear
+]
+
+ignore = [
+    "E501",  # line too long, handled by black
 ]
 
 [build-system]
