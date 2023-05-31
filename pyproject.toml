@@ -23,7 +23,7 @@ python = ">= 3.7, < 3.11"
 misaka = "~2.1.1"
 Pygments = "~2.15.1"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 coverage = "^6.4.2"
 tox = "^3.25.1"
 Django = [
@@ -33,6 +33,16 @@ Django = [
 pytest = "^7.1.2"
 pytest-django = "^4.5.2"
 flake8 = "^5.0.1"
+ruff = "^0.0.267"
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # Pyflakes
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
 
 [build-system]
 requires = ["poetry>=0.12"]
