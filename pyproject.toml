@@ -36,6 +36,7 @@ flake8 = "^5.0.1"
 ruff = "^0.0.267"
 black = "^23.3.0"
 isort = "^5.11.5"
+pre-commit = "^2.21.0"
 
 [tool.ruff]
 select = [
