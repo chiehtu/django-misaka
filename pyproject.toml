@@ -17,6 +17,7 @@ classifiers = [
     'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
 ]
 include = ["CHANGELOG.md"]
+exclude = ["django_misaka/tests.py"]
 
 [tool.poetry.dependencies]
 python = ">= 3.7, < 3.11"
@@ -57,5 +58,5 @@ known_django = "django"
 sections = ["FUTURE", "STDLIB", "DJANGO", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
