@@ -1,5 +1,6 @@
 *.pyc
 .coverage.*
+.secrets
 .tox/
 .vscode/
 coverage.lcov
