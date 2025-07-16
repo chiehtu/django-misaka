@@ -1,9 +1,7 @@
-.coverage
-.tox
-.vscode
-*.egg-info
 *.pyc
-build
-coverage/
-dist
-poetry.lock
+.coverage.*
+.tox/
+.vscode/
+coverage.lcov
+dist/
+uv.lock
